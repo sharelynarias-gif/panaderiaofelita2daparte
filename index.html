@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+  <title>Ofelita | Panaderia y Pasteleria Artesanal - Peru</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="logo-wrapper">
+    <div class="logo-imagen" aria-label="Logo Ofelita Panaderia">
+      <img src="WhatsApp Image 2026-04-23 at 9.36.59 PM.jpeg" alt="">
+    </div>
+    <div class="logo-tagline">
+      PANADERIA & PASTELERIA ARTESANAL
+    </div>
+    <div class="sub-lema">
+      Masa madre viva · Tradicion familiar · Sabor autentico
+    </div>
+  </div>
+</header>
+
+<nav class="nav-menu">
+  <a href="index.html#inicio"><i class="fas fa-home"></i> Inicio</a>
+  <a href="menu.html"><i class="fas fa-utensils"></i> Menu</a>
+  <a href="nosotros.html"><i class="fas fa-store"></i> Ofelita</a>
+  <a href="index.html#contacto"><i class="fas fa-clock"></i> Horario</a>
+</nav>
+
+<main>
+  <section id="inicio" class="container">
+    <div class="info-grid">
+      <div class="info-text">
+        <h2 style="font-family: 'Playfair Display'; color: #B44C2C; margin-bottom: 1rem; font-weight: 600;">El arte del buen pan</h2>
+        <p>En <strong>Ofelita Panaderia y Pasteleria</strong> honramos las recetas heredadas con tecnicas artesanales. Nuestra masa madre viva, los fermentos naturales y la seleccion minuciosa de ingredientes dan vida a cada pan, pastel y bocado. Desde 1998, elaboramos con pasion en nuestro taller, manteniendo viva la esencia de la panaderia tradicional peruana.</p>
+        <p>Ingredientes 100% naturales · Sin aditivos · Atencion calida y dedicada. Descubre el verdadero placer de lo bien horneado.</p>
+        <div style="height: 2px; width: 50px; background: #E6A017; margin: 1rem 0;"></div>
+        <p><i class="fas fa-check" style="color:#E6A017;"></i> Proveedores locales · <i class="fas fa-check" style="color:#E6A017;"></i> Harinas saludables · <i class="fas fa-check" style="color:#E6A017;"></i> Recetas originales</p>
+      </div>
+      <div class="info-highlight">
+        <i class="fas fa-crown"></i>
+        <span>Mas de 15 anos horneando con esencia</span>
+        <div style="display: flex; gap: 5px; color: #E6A017;">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+        </div>
+        <p style="font-size: 0.8rem; margin-top: 6px;">Clientes fieles · legado de tradicion</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="container">
+    <div class="section-title">
+      <i class="fas fa-map-marker-alt"></i> Visitanos
+    </div>
+    <div class="info-contacto">
+      <div class="contacto-item">
+        <i class="fas fa-clock"></i>
+        <h4>Horario de atencion</h4>
+        <div class="horario">
+          <p><strong>Lunes a Viernes:</strong> 06.00 - 22:00</p>
+          <p><strong>Sabados:</strong> 06:00 - 22:00</p>
+          <p><strong>Domingos y Festivos:</strong> 06:00 - 22:00</p>
+        </div>
+      </div>
+      <div class="contacto-item">
+        <i class="fas fa-location-dot"></i>
+        <h4>Donde nos ubicamos</h4>
+        <p>Esq. Av. Tupac Amaru y conquistadores 171 ,S.M.P, Lima - Peru</p>
+        <p><i class="fas fa-subway"></i> Paradero chile , hacia arriba</p>
+      </div>
+      <div class="contacto-item">
+        <i class="fas fa-phone-alt"></i>
+        <h4>Contacto & pedidos</h4>
+        <p><i class="fab fa-whatsapp" style="color:#25D366;"></i> +51 974018074</p>
+        <p><i class="fas fa-envelope"></i> hola@ofelitapanaderia.pe</p>
+        <p><i class="fab fa-instagram"></i> @ofelita.panaderia</p>
+        <p><i class="fab fa-facebook"></i> Ofelita Pasteleria</p>
+      </div>
+    </div>
+    <div style="margin-top: 2rem; background: #DCCFBC; border-radius: 36px; padding: 1rem; text-align: center; font-size: 0.9rem; font-weight: 500;">
+      <i class="fas fa-map-pin"></i> Encuentranos en el distrito de San Martin de Porres - Lima. ¡Te esperamos con el horno encendido!
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div>
+    <i class="fas fa-copyright"></i> 2025 Ofelita Panaderia y Pasteleria – Tradicion y corazon artesanal. 
+    <p style="margin-top: 8px; letter-spacing: 0.3px;">Productos 100% elaborados a mano · Ingredientes de origen consciente · Hecho en Peru</p>
+  </div>
+</footer>
+
+<script>
+  (function() {
+    document.querySelectorAll('.nav-menu a').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if(targetId && targetId !== '#' && targetId.includes('#')) {
+          const hash = targetId.split('#')[1];
+          if(hash) {
+            const targetEl = document.getElementById(hash);
+            if(targetEl) {
+              e.preventDefault();
+              targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          }
+        }
+      });
+    });
+    console.log("Ofelita · Panaderia artesanal en Peru");
+  })();
+</script>
+</body>
+</html>
